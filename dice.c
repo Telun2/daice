@@ -5,8 +5,9 @@
 int main(){
     srand((unsigned)time(NULL));
 
-    int n=0, m=0;
+    int n=0,m=0;
     char name[100];
+    int total;
 
     n = (rand()%6)+1;
     m = (rand()%6)+1;
@@ -18,7 +19,13 @@ int main(){
     printf("Rolling dice...\n");
     printf("Die 1:%d\n",n);
     printf("Die 2:%d\n",m);
+    total = n+m;
     printf("Total value:%d\n",n+m);
+
+    if ( total >= 8){
+        printf("You won!\n");
+    }
+    else printf("You lost\n");
 
     return 0;
 }
